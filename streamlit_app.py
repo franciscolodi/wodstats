@@ -16,7 +16,6 @@ st.write("Ingrese resultados de los WOD")
 # ------------------------
 W1T = st.number_input("W1T (segundos)", 0.0)
 W2T = st.number_input("W2T (segundos)", 0.0)
-W3P = st.number_input("W3P (reps/puntos)", 0.0)
 W3T = st.number_input("W3T (segundos)", 0.0)
 W4R = st.number_input("W4R (reps)", 0.0)
 W5AR = st.number_input("W5AR (reps)", 0.0)
@@ -30,7 +29,6 @@ if st.button("Predecir posición"):
     data = pd.DataFrame([{
         'W1T': W1T,
         'W2T': W2T,
-        'W3P': W3P,
         'W3T': W3T,
         'W4R': W4R,
         'W5AR': W5AR,
