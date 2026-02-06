@@ -9,7 +9,7 @@ model = pickle.load(open("modelo_wod.pkl", "rb"))
 
 st.title("🏋️ Predictor Ranking CrossFit")
 
-st.write("Ingrese resultados de los WOD")
+st.write("Ingrese resultados de los WOD Final Amateur Hombre Strongfit 2026")
 
 # ------------------------
 # Inputs
