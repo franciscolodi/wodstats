@@ -1,11 +1,13 @@
 import streamlit_authenticator as stauth
 
+
 def login():
 
     names = ["Admin"]
     usernames = ["admin"]
 
     passwords = ["1234"]
+
     hashed_passwords = stauth.Hasher(passwords).generate()
 
     authenticator = stauth.Authenticate(
