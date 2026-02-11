@@ -1,18 +1,19 @@
 import streamlit_authenticator as stauth
 
-# Crear hash SOLO una vez
-hashed_passwords = stauth.Hasher(['1234']).generate()
-
 
 def login():
 
-    names = ["Admin"]
-    usernames = ["admin"]
+    credentials = {
+        "usernames": {
+            "admin": {
+                "name": "Admin",
+                "password": stauth.Hasher(["1234"]).generate()[0]
+            }
+        }
+    }
 
     authenticator = stauth.Authenticate(
-        names,
-        usernames,
-        hashed_passwords,
+        credentials,
         "wodstats_cookie",
         "abcdef",
         cookie_expiry_days=1
